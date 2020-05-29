@@ -1,0 +1,185 @@
+#body {
+    background-color: black;
+    font-family: 'DejaVu Sans Mono', monospace;
+}
+
+#game-title {
+    height: 75px;
+}
+
+#game-title-label {
+    color: whitesmoke;
+    font-size: xxx-large;
+}
+
+#statusbar {
+    border-bottom: red solid 2px;
+    background-color: #641b1b;
+    color: whitesmoke;
+    font-size: xx-small;
+    font-family: 'DejaVu Sans Mono', monospace;
+    height: 20px;
+
+}
+#statuslabel{
+    padding-left: 20px;
+}
+
+#middle-column {
+    height: 600px;
+    background-color: #641b1b;
+    opacity: 80%;
+    border: solid 2px #451212;
+    border-radius: 20px;
+}
+
+#lastNumberContainer {
+    color: #9d2929;
+    margin-top: 80px;
+}
+
+#lastNumberLabel{
+    background-color: black;
+    padding: 30px;
+    font-size: 7vw;
+}
+
+#input-first-number, #join-game-id, #input-player-name, #join-player-name {
+    background-color: #9d2929;
+    color: whitesmoke;
+    border: 0;
+    border-radius: 45px;
+    padding: 3px;
+    height: 50px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+
+#create-game-form {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    margin-top: 10px
+}
+
+#join-game-form {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    margin-top: 10px
+}
+
+#create-game-button {
+    background-color: black;
+    color: #bf3333;
+    border: 0;
+}
+
+#decision-box {
+    margin-top: 190px;
+}
+
+#minusonebtn, #zerobtn, #plusonebtn {
+    background-color: whitesmoke;
+    border: double 3px red;
+    height: 85px;
+}
+
+#alwaysauto{
+    width: 100px;
+}
+
+#automaticbtn {
+    background-color: #898989;
+    border: double 3px red;
+    height: 89px;
+}
+#autotext {
+    font-size: 18px;
+}
+
+.autocheckcontainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 30px;
+    color: whitesmoke;
+}
+.autocheckcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #000000;
+    color: whitesmoke;
+}
+.autocheckcontainer:hover input ~ .checkmark {
+    background-color: #6c0000;
+}
+/* When the checkbox is checked, add a blue background */
+.autocheckcontainer input:checked ~ .checkmark {
+    background-color: rgba(0, 0, 0, 0.96);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.autocheckcontainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.autocheckcontainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#right-column{
+    height: 600px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+#logslabel{
+    color: whitesmoke;
+    font-size: small;
+    font-family: monospace;
+}
+
+#errorlabel {
+    color: red;
+    font-size: large;
+    font-family: monospace;
+}

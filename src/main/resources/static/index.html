@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Of Three</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/jquery-validation/jquery.validate.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <link href="/css/main.css" rel="stylesheet">
+    <script src="/js/scenes.js"></script>
+    <script src="/js/events.js"></script>
+    <script src="/js/actions.js"></script>
+    <script src="/js/app.js"></script>
+
+</head>
+<body id="body">
+<div id="maincontent" class="container-fluid m-0 p-0">
+
+    <div id="header" class="row">
+
+        <div id="statusbar" class="col-12 justify-content-start pl-3 pt-1 pb-0">
+            <span id="statuslabel"></span>
+        </div>
+
+        <div id="game-title" class="col-12 text-center mt-2">
+            <h1 id="game-title-label">GaMe of 3HREE</h1>
+        </div>
+
+    </div>
+
+    <div id="template" class="row">
+
+        <div id="left-column" class="col-3"></div>
+
+        <div id="middle-column" class="col-6">
+
+            <div id="create-or-join" class="col-12">
+                <div id="create-game-content" class="col-12">
+                    <form id="create-game-form" class="row">
+                        <div class="form-group col-8">
+                            <input id="input-player-name" type="text" class="form-control" placeholder="Your Name"
+                                   required>
+                            <input id="input-first-number" type="number" class="form-control" placeholder="First Number"
+                                   required>
+                        </div>
+
+                        <input id="create-game-button" type="submit" class="col-4 rounded-circle" value="CrEAte gAMe"/>
+                    </form>
+                </div>
+                <div id="join-game-content" class="col-12">
+                    <form id="join-game-form" class="row">
+                        <div class="form-group col-8">
+                            <input id="join-player-name" type="text" class="form-control" placeholder="Your Name"
+                                   required>
+                            <input id="join-game-id" type="text" class="form-control" placeholder="Game Id" required>
+                        </div>
+
+                        <input id="join-game-button" type="submit" class="col-4 rounded-circle" value="jOiN gAMe"/>
+                    </form>
+                </div>
+            </div>
+
+            <div id="game-play-scene" class="col-12">
+                <div class="row text-center">
+                    <div id="lastNumberContainer" class="col-12">
+                        <span id="lastNumberLabel" class="rounded-circle">
+                        </span>
+                    </div>
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div class="col-3">
+                        <label  class="autocheckcontainer">Auto-Play
+                            <input id="autocheck" type="checkbox"/>
+                            <span id="autochecktext" class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="decision-box" class="row text-center justify-content-center">
+                    <div class="col-2">
+                        <button id="minusonebtn" class="col-12 rounded-circle">-1</button>
+                    </div>
+                    <div class="col-2">
+                        <button id="zerobtn" class="col-12 rounded-circle">0</button>
+                    </div>
+                    <div class="col-2">
+                        <button id="plusonebtn" class="col-12 rounded-circle">+1</button>
+                    </div>
+                    <div class="col-3">
+                        <button id="automaticbtn" class="col-12 rounded-circle">
+                            Automatic
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="right-column" class="col-3">
+            <div id="game-log-scene" class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <span id="logslabel">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer" class="row">
+
+        <div class="col-12 text-center">
+            <label id="errorlabel"></label>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
